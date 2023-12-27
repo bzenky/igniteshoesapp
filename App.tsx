@@ -11,12 +11,13 @@ import { Loading } from './src/components/Loading';
 import { CartContextProvider } from './src/contexts/CartContext';
 import { onesignalInitialize } from './src/libs/onesignal';
 
-useEffect(() => {
-  onesignalInitialize()
-}, [])
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+
+  useEffect(() => {
+    onesignalInitialize()
+  }, [])
 
   return (
     <NativeBaseProvider theme={THEME}>
